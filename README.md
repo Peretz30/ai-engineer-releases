@@ -6,7 +6,7 @@
 
 ### [⬇ Скачать последнюю версию](https://github.com/Peretz30/ai-engineer-releases/releases/latest)
 
-Windows 10/11, 64 бита · 188 МБ · без прав администратора · дальше обновляется сам
+Windows 10/11, 64 бита · 220 МБ · без прав администратора · дальше обновляется сам
 
 [![Окно инженера: график педалей в повороте-цели поверх эталона](screenshot.png)](demo.mp4)
 
@@ -31,11 +31,18 @@ Windows 10/11, 64 бита · 188 МБ · без прав администрат
 
 | Машина | Трассы с эталонами |
 |---|---|
-| **GT3**, все 11 машин | Нордшляйфе, Mugello, Red Bull Ring, Imola, Daytona, Fuji, Indianapolis, Long Beach, VIR, Adelaide, Le Mans, Tsukuba |
-| **Mazda MX-5 Cup** | Lime Rock GP, Mount Panorama, Charlotte Roval, Oulton Park, Navarra, Нюрбургринг GP |
-| **Porsche 911 Cup** | Mount Panorama, Road America, COTA GP |
+| **GT3**, все 11 машин | Adelaide, COTA, Daytona, Fuji, Imola, Indianapolis, Jerez, Le Mans, Long Beach, Mexico City, Mid-Ohio, Mugello, Red Bull Ring, Rudskogen (кроме Audi), Sebring, Silverstone GP, Spa, Suzuka, Tsukuba, VIR |
+| **Mazda MX-5 Cup** | Charlotte Roval, Lime Rock GP, Mount Panorama, Navarra, Нюрбургринг GP, Okayama Short, Oulton Park, Summit Point |
+| **Porsche 911 Cup** | Algarve, COTA, Hungaroring, Mount Panorama, Road America |
+| **FIA F4** | Interlagos, Mexico City, Monza, Mount Panorama, Red Bull Ring, Road Atlanta, Suzuka, Watkins Glen |
+| **BMW M2** | Lédenon, Navarra, Okayama Short, Summit Point |
+| **Toyota GR86** | Laguna Seca, Lime Rock GP, Navarra, Road Atlanta, Snetterton, Sonoma, Summit Point, Zandvoort |
 
-На других трассах инженер сравнивает с твоим лучшим кругом.
+F4, M2 и GR86 — новые: с инженером на них ещё никто не ездил. На Нордшляйфе эталоны для
+GT3 есть, но там инженер пока помогает мало.
+
+Где есть карта поворотов, но нет эталонов, инженер сравнивает с твоим лучшим кругом. Где
+карты нет — говорит только время круга.
 
 ## Установка
 
@@ -51,7 +58,18 @@ Windows 10/11, 64 бита · 188 МБ · без прав администрат
 Открой **AI Engineer** из «Пуска», сядь в машину и выезжай — дальше инженер ведёт сам.
 Новые версии окно предложит при запуске, одной кнопкой.
 
+## Что делает на компьютере
+
+- Читает телеметрию iRacing из общей памяти сима, только на чтение, и файлы кругов,
+  которые iRacing сам пишет в `Документы\iRacing`.
+- Читает `app.ini` iRacing, чтобы проверить, включена ли запись телеметрии. Сам его не
+  меняет.
+- Свои данные — цели, твои заметки, лог заезда, скачанные обновления — хранит в
+  `%USERPROFILE%\.aiengineer`.
+- В интернет ходит только при запуске: спрашивает у GitHub, нет ли новой версии, и по
+  кнопке скачивает её оттуда же.
+- Голос — модель на диске, без интернета.
+
 ## Чего не делает
 
-Не советует по сетапу. В интернет ходит только при запуске — спросить, нет ли новой
-версии.
+Не советует по сетапу.
